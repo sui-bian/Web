@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Flat UI - Free Bootstrap Framework and Theme</title>
-    <meta name="description" content="小鲜肉"/>
+<head>
+  <meta charset="utf-8">
+  <title>Flat UI - Free Bootstrap Framework and Theme</title>
+  <meta name="description" content="小鲜肉"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <!-- Loading Bootstrap -->
-    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-    <!-- Loading Flat UI -->
-    <link href="css/flat-ui.css" rel="stylesheet">
-    
-    <link href="css/lsm.css" rel="stylesheet">
+  <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <link rel="shortcut icon" href="img/favicon.ico">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 
-    <script src="js/vendor/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/star-rating.css">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-rating-input.js"></script>
-    <style>
-      body {
-        font-size: 20px;
-        padding: 50px;
-      }
-    </style>
-    <script>
-      $(function(){
-        $('input').on('change', function(){
-          alert("Changed: " + $(this).val())
-        });
-      });
-    </script>
-  </head>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+  <style>
+  body {
+    font-size: 20px;
+    padding: 5px;
+  }
+  </style>
+  <script>
+  $(function(){
+    $('input').on('change', function(){
+      alert("Changed: " + $(this).val())
+    });
+  });
+  </script>
+</head>
 <body>
-<div class="container">
-<div class="row demo-row">
-        <div class="col-xs-12">
-          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-                <span class="sr-only">Toggle navigation</span>
-              </button>
-              <a class="navbar-brand" href="#">看妹子</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-01">
-              <ul class="nav navbar-nav navbar-left">
-                <li><a href="#fakelink">朕来打分<span class="navbar-unread">1</span></a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">排行榜<b class="caret"></b></a>
-                  <span class="dropdown-arrow"></span>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">综合排行榜</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">看腿排行</a></li>
-                    <li><a href="#">看胸排行</a></li>
-                    <li><a href="#">看脸排行</a></li>
-                  </ul>
-                </li>
-                <li><a href="#fakelink">关于我们</a></li>
-               </ul>
-               <form class="navbar-form navbar-right" action="#" role="search">
-                <div class="form-group">
-                  <div class="input-group">
-                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-                    <span class="input-group-btn">
-                      <button type="submit" class="btn"><span class="fui-search"></span></button>
-                    </span>
-                  </div>
-                </div>
-              </form>
-            </div><!-- /.navbar-collapse -->
-          </nav><!-- /navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">挑一个</a>
         </div>
-      </div> <!-- /row -->
-      <div class="row demo-row">
-        <div class="col-xs-12 col-md-3">
-          <div class='img-warpper'>
-              <img src="img/5372_1.jpg" class="img-responsive img-rounded" alt="Responsive image">
-              <p>My rating: 
-                <input type="number" name="your_awesome_parameter" id="some_id" class="rating" data-caption="['很差', '较差', '还行', '推荐', '力荐']" value="" data-min="1" data-max="5" />
-              </p>
-          </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">排行榜</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">激情邀拍<span class="caret"></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">街拍</a></li>
+                <li><a href="#">show一下</a></li>
+                <li><a href="#">租男/女友</a></li>
+                <li class="divider"></li>
+                <li><a href="#">谈一星期恋爱</a></li>
+
+              </ul>
+            </li>
+            <li>
+              <a href="#">段子手</a>
+              
+            </li>
+            <li>
+              <a href="#">关于我们</a>
+              
+            </li>
+          </ul>
           
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="row demo-row">
+      <div class="col-xs-12 col-md-3">
+        <div class='img-warpper'>
+          <img src="img/5372_1.jpg" class="img-responsive img-rounded" alt="Responsive image">
 
         </div>
-        <div class="col-xs-12 col-md-3">
-          <div class='img-warpper'>
-              <img src="img/5382_10.jpg" class="img-responsive img-rounded" alt="Responsive image">
-              <div id="default"></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class='img-warpper'>
-              <img src="img/5373_1.jpg" class="img-responsive img-rounded" alt="Responsive image">
-              <div id="default"></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class='img-warpper'>
-              <img src="img/5392_1.jpg" class="img-responsive img-rounded" alt="Responsive image">
-              <div id="default"></div>
-          </div>
+
+
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class='img-warpper'>
+          <img src="img/5382_10.jpg" class="img-responsive img-rounded" alt="Responsive image">
+
         </div>
       </div>
+      <div class="col-xs-12 col-md-3">
+        <div class='img-warpper'>
+          <img src="img/5373_1.jpg" class="img-responsive img-rounded" alt="Responsive image">
+
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class='img-warpper'>
+          <img src="img/5392_1.jpg" class="img-responsive img-rounded" alt="Responsive image">
+        </div>
+      </div>
+    </div>
 
 
-</div>
+  </div>
 
-
-    
-    <script src="js/flat-ui.min.js"></script>
-
-
-  </body>
+</body>
 </html>

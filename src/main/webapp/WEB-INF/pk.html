@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery老虎机插件SlotMachine演示3_dowebok</title>
+  <meta charset="utf-8">
+  <title>Flat UI - Free Bootstrap Framework and Theme</title>
+  <meta name="description" content="小鲜肉"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Loading Bootstrap -->
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="css/flat-ui.css" rel="stylesheet">
+
+  <link href="css/lsm.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.slotmachine.js"></script>
+  <style>
+  * { margin: 0; padding: 0;}
+  body { background-color: #DCD293;}
+  .slotMachineBox { padding: 150px 0px; text-align: center;}
+  .slotMachineButton { width: 100px; height: 100px; overflow: hidden; display: inline-block; text-align: center; }
+  .slotMachineButton { -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1; -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1; box-shadow: inset 0px 1px 0px 0px #fce2c1; background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) ); background: -moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+  background-color: #ffc477; border-radius: 75px; text-indent: 0px; border: 6px solid #eeb44f; display: inline-block; color: #ffffff; font: 30px/100px "Microsoft Yahei"; height: 100px; line-height: 100px; width: 100px; text-align: center; text-shadow: 1px 1px 0px #cc9f52; margin-left: 50px; cursor: pointer; }
+  .slotMachineButton:hover { background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) ); background: -moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+  background-color: #fb9e25; }
+  .slotMachineButton:active { position: relative; top: 1px; }
+  #slotMachineButtonPrev { margin: 0 50px 0 0;}
+  .slotMachine { max-width: auto; height: 400px; overflow: hidden; display: inline-block; text-align: center; border: 5px solid #000; background-color: #ffffff; }
+  .slotMachine .slot { height:400px;max-width: auto;}
+
+  img {
+    width: 350px;
+    height : auto;
+    max-height: 400px;
+    max-width: 100%;
+  }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="row demo-row">
+      <div class="col-xs-12">
+        <div class="slotMachineBox">
+          <div id="slotMachineButtonPrev" class="slotMachineButton">PREV</div>
+          <div id="machine7" class="slotMachine">
+            <div class="slot slot1">
+              <img src="img/5372_1.jpg"/>
+            </div>
+            <div class="slot slot2">
+              <img src="img/5373_1.jpg"/>
+            </div>
+            <div class="slot slot3">
+              <img src="img/5381_1.jpg"/>
+            </div>
+            <div class="slot slot4">
+              <img src="img/5382_1.jpg"/>
+            </div>
+            <div class="slot slot5">
+              <img src="img/5382_2.jpg"/>
+            </div>
+            <div class="slot slot6">
+              <img src="img/5392_1.jpg"/>
+            </div>
+          </div>
+          <div id="slotMachineButtonNext" class="slotMachineButton">NEXT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+  $(document).ready(function(){
+    var machine7 = $("#machine7").slotMachine({
+      active  : 0,
+      delay : 5000,
+      repeat  : false
+    });
+
+    $("#slotMachineButtonPrev").click(function(){
+      machine7.prev();
+    });
+
+    $("#slotMachineButtonNext").click(function(){
+      machine7.next();
+    });
+  });
+  </script> 
+
+
+</body>
+</html>
