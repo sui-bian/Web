@@ -24,7 +24,7 @@
 		<property name="mapperLocations">  
             <list>  
             <!-- 表示在com.hoo.resultmap包或以下所有目录中，以-resultmap.xml结尾所有文件 --> 
-             <value> classpath:main/resources/mybatis/*.xml</value > 
+             <value> classpath:mybatis/*.xml</value >
             </list>       
        </property>
 	</bean>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lehuo.lsm.dao.LinksDao">
+
+    <sql id="Column">id,link,domains,reply,extra,visit_num,author,content,img,title,authorlink,posttime,pageno</sql>
+
+    <select id="selectMax" resultType="java.lang.Integer">
+        select max(id) from links;
+	</select>
+
+    <select id="selectNearMax" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        <![CDATA[
+
+          select max(id) from links where id<#{id};
+
+        ]]>
+	</select>
+
+    <select id="select" resultType="links" parameterType="links">
+
+          select <include refid="Column"/> from links where id = #{id};
+
+	</select>
+
+
+</mapper>

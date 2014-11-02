@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lehuo.lsm.dao.PkSubmitDao">
+
+	<sql id="Column">sessionid,age,birth,ip</sql>
+	<sql id="likeCondition"> like </sql>
+
+	<insert id="insert" parameterType="PkImg" useGeneratedKeys="true" keyProperty="id">
+        <selectKey keyProperty="id" resultType="int" order="AFTER">
+            SELECT
+            LAST_INSERT_ID()
+        </selectKey>
+		insert into pk_submit(<include refid="Column"/>) values(#{sessionId},#{age},#{birth},#{ip});
+	</insert>
+
+	<delete id="delete" parameterType="long">
+
+	</delete>
+	
+</mapper>

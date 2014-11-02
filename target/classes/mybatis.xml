@@ -13,10 +13,9 @@
 		<setting name="defaultStatementTimeout" value="25000"/>  
 	</settings>
 	<typeAliases>
-		<typeAlias type="lehuo.lsm.model.User" alias="User" />
+        <package name="lehuo.lsm.model"></package>
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="mybatis/User.xml"/>
 	</mappers>
 </configuration>
