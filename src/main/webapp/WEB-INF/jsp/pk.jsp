@@ -104,6 +104,14 @@
             repeat  : false
         });
 
+        $('#age').on('change',function(){
+            $.get("<%=request.getContextPath() %>/imgpk/agebirth",{Action:"get",age:$('#age').val(),birth:$('#birth').val()});
+        });
+
+        $('#birth').on('change',function(){
+            $.get("<%=request.getContextPath() %>/imgpk/agebirth",{Action:"get",age:$('#age').val(),birth:$('#birth').val()});
+        });
+
         var right = $("#right").slotMachine({
             active  : 0,
             delay : 5000,

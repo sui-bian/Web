@@ -1,8 +1,10 @@
 package lehuo.lsm.controller;
 
 import lehuo.lsm.global.Global;
+import lehuo.lsm.model.Comment;
 import lehuo.lsm.model.Links;
 import lehuo.lsm.model.PkImg;
+import lehuo.lsm.service.impl.CommentService;
 import lehuo.lsm.service.impl.ImgPKService;
 import lehuo.lsm.service.impl.LinksService;
 import org.apache.commons.lang.StringUtils;
@@ -25,6 +27,9 @@ public class RankController {
 
     @Resource
     LinksService linksService;
+
+    @Resource
+    CommentService commentService;
 
     @RequestMapping(value = "/rankList")
     public String rankList(ModelMap map){
@@ -66,6 +71,21 @@ public class RankController {
         String id = data.replace("rating:","");
         Integer sc = Integer.parseInt(score);
         return "success";
+    }
+
+    @RequestMapping(value = "/comment")
+    @ResponseBody
+    public String comment(String linkId,String comment){
+        if(StringUtils.isBlank(comment)){
+            return "false";
+        }else{
+            try{
+                commentService.insert(new Comment(Integer.parseInt(linkId),comment));
+                return "true";
+            }catch(Exception e){
+                return "false";
+            }
+        }
     }
 
     private List<String> parseImgUrl(String url){

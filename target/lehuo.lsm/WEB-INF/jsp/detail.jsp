@@ -12,7 +12,12 @@
     $(function(){
         $('input').on('change', function(){
             $.get("<%=request.getContextPath() %>/rank/score",{Action:"get",data:this.id,score:$(this).val()});
-            $(this).hidden();
+            $(".rating-input").hide();
+
+        });
+
+        $('#commitsubmit').on("click",function(){
+            $.get("<%=request.getContextPath() %>/rank/comment",{Action:"get",linkId:$('#comment').data('imgid'),comment:$('#comment').val()});
         });
     });
 </script>
@@ -32,11 +37,11 @@
                     <div class="image">
                         <img src="${img}" class="img-responsive img-rounded" style="max-width: 800px;height: auto"/>
                         <input type="number" name="your_awesome_parameter" id="rating:${img}" class="rating" data-caption="['负分', '不中', '不错哟', '一级棒', '女神']" value="" data-min="1" data-max="5" />
-                        <div class="star_bg star_1_s star_margin" alt="rating:${img}1" style="display: none"></div>
-                        <div class="star_bg star_2_s star_margin" alt="rating:${img}2" style="display: none"></div>
-                        <div class="star_bg star_3_s star_margin" alt="rating:${img}3" style="display: none"></div>
-                        <div class="star_bg star_4_s star_margin" alt="rating:${img}4" style="display: none"></div>
-                        <div class="star_bg star_5_s star_margin" alt="rating:${img}5" style="display: none"></div>
+                        <div class="star_bg star_1_s star_margin" id="rating:${img}1" style="display: none"></div>
+                        <div class="star_bg star_2_s star_margin" id="rating:${img}2" style="display: none"></div>
+                        <div class="star_bg star_3_s star_margin" id="rating:${img}3" style="display: none"></div>
+                        <div class="star_bg star_4_s star_margin" id="rating:${img}4" style="display: none"></div>
+                        <div class="star_bg star_5_s star_margin" id="rating:${img}5" style="display: none"></div>
                     </div>
 
                 </c:forEach>
@@ -52,7 +57,11 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-
+            <div class="col-xs-12">
+                <textarea id="comment" data-imgid="${link.id}" data-valtype="checkbox" class="valtype col-xs-6" >
+                </textarea>
+                <input type="submit" value="提交" id="commitsubmit"/>
+            </div>
         </div>
     </div>
 </div>

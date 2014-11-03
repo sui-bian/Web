@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,14 +32,16 @@ public class ImgPKController {
     private static final int oneBatchNum = 10;
 
     @RequestMapping(value = "/index")
-    public String oneRound(ModelMap map) {
+    public String oneRound(ModelMap map,HttpSession session) {
         if(Global.getLINK_MAX()==0){
             Global.setLINK_MAX(linksService.selectMax());
         }
 
         /*List<Integer> left= linksService.selectRandom(oneBatchNum);
         List<Integer> right= linksService.selectRandom(oneBatchNum);*/
-
+        if(session.getAttribute("age")!=null){
+            Integer i = (Integer)session.getAttribute("age");
+        }
         List<String> left = new ArrayList<String>();
         left.add("1.jpg");
         left.add("2.jpg");
@@ -81,11 +84,21 @@ public class ImgPKController {
         return list.toString();
     }
 
+    @RequestMapping(value = "/agebirth")
+    @ResponseBody
+    public String agebirth(String age,String birth,HttpSession session){
+        try{
+            Integer ageint = Integer.parseInt(age);
+            Integer birthint = Integer.parseInt(birth);
 
-
-
-
-    public static void main(String[] args) {
+            session.setAttribute("age",ageint);
+            session.setAttribute("birth",birthint);
+            return "true";
+        }catch(Exception e){
+            return "false";
+        }
 
     }
+
+
 }
