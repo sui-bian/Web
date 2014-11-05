@@ -66,14 +66,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">挑妹</a>
+                <a class="navbar-brand" href="#">挑妹子</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="<%=request.getContextPath() %>/imgpk/index" class="dropdown-toggle" data-toggle="dropdown">挑妹子<span class="caret"></a>
+                        <a href="<%=request.getContextPath() %>/imgpk/index" class="dropdown-toggle" data-toggle="dropdown">挑妹子<span class="caret"/></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">猜打分</a></li>
                             <li><a href="#">我要PK</a></li>
@@ -83,15 +83,9 @@
                         </ul>
                     </li>
                     <li class="active"><a href="<%=request.getContextPath() %>/rank/rankList">排行榜</a></li>
+                    <li class="active"><a href="<%=request.getContextPath() %>/rank/rankList">组局蹭饭</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">组个局<span class="caret"></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"></a></li>
-
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">休闲一下<span class="caret"></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">休闲一下<span class="caret"/></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">段子党</a></li>
                             <li><a href="#">小游戏</a></li>
