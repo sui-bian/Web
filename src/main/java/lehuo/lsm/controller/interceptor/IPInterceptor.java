@@ -2,6 +2,8 @@ package lehuo.lsm.controller.interceptor;
 
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,12 +21,13 @@ import javax.servlet.http.HttpSession;
 public class IPInterceptor extends HandlerInterceptorAdapter {
     //private static final Logger logger = LoggerFactory
     private final static String REQUEST_IP_HEADER = "X-Real-IP";
+    private static Logger logger = LoggerFactory.getLogger(IPInterceptor.class);
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String requestURL = request.getRequestURI();
         String ip = getIpAddr(request);
         //logger.info("请求的url为: {}, ip为: {}", requestURL, ip);
-
+        logger.info("admin interceptor {},{}",request.getRequestedSessionId(),request.getRequestURI());
         request.setAttribute("ip",ip);
         return true;
     }

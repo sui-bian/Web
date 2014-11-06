@@ -70,7 +70,7 @@
     <file path="E:/xcd/fuwu_xcd/src/main/java/com/qunar/flightqm/xcd/web/controller/ManualPushController.java" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415189843827" ignored="false" />
     <file path="/pom.xml" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415258857276" ignored="false" />
     <file path="/logback.xml" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415260276854" ignored="false" />
-    <file path="/UserAuthInterceptor.java" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415279730831" ignored="false" />
+    <file path="/UserAuthInterceptor.java" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415279904671" ignored="false" />
     <file path="E:/tts_invoice/tts_invoice/provider/src/main/resources.betabox/dubbo.xml" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415268969576" ignored="false" />
     <file path="/dubbo.xml" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415268969577" ignored="false" />
     <file path="E:/xcd/fuwu_xcd/src/main/resources/mybatis/mapping/xcdprinttask.xml" changelist="4946004f-6bf3-42b4-813f-5d03898515e3" time="1415269767915" ignored="false" />
@@ -231,19 +231,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IPInterceptor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IPInterceptor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/IPInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="44" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
+            <state line="23" column="72" selection-start="727" selection-end="727" vertical-scroll-proportion="0.16380952">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAuthInterceptor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserAuthInterceptor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/UserAuthInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="41" selection-start="912" selection-end="912" vertical-scroll-proportion="0.42857143">
+            <state line="23" column="4" selection-start="588" selection-end="670" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -337,7 +337,6 @@
         <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/service/impl/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/Comment.xml" />
         <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/RankController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/IPInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/pk.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/dataSource.properties" />
         <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/IndexController.java" />
@@ -350,6 +349,7 @@
         <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/ImgPKController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/UserAuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/IPInterceptor.java" />
       </list>
     </option>
   </component>
@@ -1431,13 +1431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/IPInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/ImgPKController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="82" selection-start="752" selection-end="830" vertical-scroll-proportion="0.0">
@@ -1480,7 +1473,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/UserAuthInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="912" selection-end="912" vertical-scroll-proportion="0.42857143">
+        <state line="23" column="4" selection-start="588" selection-end="670" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lehuo/lsm/controller/interceptor/IPInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="72" selection-start="727" selection-end="727" vertical-scroll-proportion="0.16380952">
           <folding />
         </state>
       </provider>

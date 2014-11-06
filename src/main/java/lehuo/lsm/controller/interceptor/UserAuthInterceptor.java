@@ -28,7 +28,7 @@ public class UserAuthInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        logger.info("admin interceptor");
+        logger.info("admin interceptor {},{}",request.getRequestedSessionId(),request.getRequestURI());
         return true;
 
     }
