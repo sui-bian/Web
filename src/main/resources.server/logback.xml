@@ -33,7 +33,7 @@
             <charset>${encoding}</charset>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/fuwu_xcd_sql.%d{yyyy-MM-dd}.log
+            <fileNamePattern>${log.dir}/sql.%d{yyyy-MM-dd}.log
             </fileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
