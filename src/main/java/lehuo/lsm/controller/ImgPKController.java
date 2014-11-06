@@ -24,7 +24,7 @@ import java.util.List;
 @RequestMapping(value = "/imgpk")
 public class ImgPKController {
 
-    private static Logger logger = LoggerFactory.getLogger("xcd.qmq");
+    private static Logger logger = LoggerFactory.getLogger(ImgPKController.class);
 
     @Resource
     private ImgPKService imgPKService;
@@ -42,9 +42,14 @@ public class ImgPKController {
 
         /*List<Integer> left= linksService.selectRandom(oneBatchNum);
         List<Integer> right= linksService.selectRandom(oneBatchNum);*/
+
         if(session.getAttribute("age")!=null){
+            logger.info("session age is {}",session.getAttribute("age"));
             Integer i = (Integer)session.getAttribute("age");
+        }else{
+            logger.info("no session");
         }
+
         List<String> left = new ArrayList<String>();
         left.add("1.jpg");
         left.add("2.jpg");
