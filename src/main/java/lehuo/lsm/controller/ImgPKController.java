@@ -1,10 +1,11 @@
 package lehuo.lsm.controller;
 
 import lehuo.lsm.global.Global;
-import lehuo.lsm.model.Links;
 import lehuo.lsm.model.PkImg;
 import lehuo.lsm.service.impl.ImgPKService;
 import lehuo.lsm.service.impl.LinksService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,8 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/imgpk")
 public class ImgPKController {
+
+    private static Logger logger = LoggerFactory.getLogger("xcd.qmq");
 
     @Resource
     private ImgPKService imgPKService;

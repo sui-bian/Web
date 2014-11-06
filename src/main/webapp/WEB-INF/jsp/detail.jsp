@@ -12,8 +12,7 @@
     $(function(){
         $('input').on('change', function(){
             $.get("<%=request.getContextPath() %>/rank/score",{Action:"get",data:this.id,score:$(this).val()});
-            $(".rating-input").hide();
-
+            $(this).parent().off();
         });
 
         $('#commitsubmit').on("click",function(){
@@ -37,11 +36,7 @@
                     <div class="image">
                         <img src="${img}" class="img-responsive img-rounded" style="max-width: 800px;height: auto"/>
                         <input type="number" name="your_awesome_parameter" id="rating:${img}" class="rating" data-caption="['负分', '不中', '不错哟', '一级棒', '女神']" value="" data-min="1" data-max="5" />
-                        <div class="star_bg star_1_s star_margin" id="rating:${img}1" style="display: none"></div>
-                        <div class="star_bg star_2_s star_margin" id="rating:${img}2" style="display: none"></div>
-                        <div class="star_bg star_3_s star_margin" id="rating:${img}3" style="display: none"></div>
-                        <div class="star_bg star_4_s star_margin" id="rating:${img}4" style="display: none"></div>
-                        <div class="star_bg star_5_s star_margin" id="rating:${img}5" style="display: none"></div>
+
                     </div>
 
                 </c:forEach>

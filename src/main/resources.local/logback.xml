@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- slf4j日志配置文件 -->
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+
+	<contextName>${HOSTNAME}</contextName>
+
+	<!-- 设置日志输出根目录 -->
+	<property name="log.dir" value="${catalina.base}/logs" />
+
+	<property name="encoding" value="UTF-8" />
+	<property name="normal-pattern"
+		value="%d{yyyy-MM-dd.HH:mm:ss} %-5level [%thread] %logger.%M:%L  %msg%n" />
+	<property name="plain-pattern" value="%d{yyyy-MM-dd.HH:mm:ss} %msg%n" />
+
+	<!-- log file default -->
+	<appender name="fuwu_xcd_default"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_default.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<!-- log file default -->
+	<appender name="fuwu_xcd_sql"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_sql.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+	<!-- log file default -->
+	<appender name="fuwu_xcd_express"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_express.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="fuwu_xcd_sto"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_sto.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+	
+	<!-- 对账 -->
+	<appender name="fuwu_xcd_bill"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_bill.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<!-- 定时任务 -->
+	<appender name="fuwu_xcd_timer"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_timer.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<!-- 物流信息 -->
+	<appender name="fuwu_xcd_logistics"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_logistics.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<!-- 主业务系统 -->
+	<appender name="fuwu_xcd_business"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_business.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<!-- qmq -->
+	<appender name="fuwu_xcd_qmq"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_qmq.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<!-- 定时任务detr，生成打印任务 -->
+	<appender name="fuwu_xcd_detrtask"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_detrtask.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="fuwu_xcd_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/fuwu_xcd_error.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="express_fee_info"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/express_fee_info.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="express_fee_error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/express_fee_error.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%.-5level|%d{yyyy-MM-dd HH:mm:ss}|%-40.40logger{0}|%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+		<!--++++++++++++++++++++++++Email日志++++++++++++++++++-->
+	<appender name="xcd_Email"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>false</prudent>
+		<Append>true</Append>
+		<encoder>
+			<pattern>${normal-pattern}</pattern>
+			<charset>${encoding}</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.dir}/mengXCD_Email.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+    <!--+++++++++++++++++++ log for Email++++++++++++++++++++++++++++ -->
+	<logger name="xcd_email" level="INFO" additivity="true">
+		<appender-ref ref="xcd_Email" />
+	</logger>
+
+
+    <!--+++++++++++++++++++++++++mybatis operate database action++++++++++++++++++++++++++++++++-->
+
+    <appender name="mybatisdatabase" class="com.qunar.flightqm.xcd.logbackDatabse.Insertlog">
+        <Filter class="com.qunar.flightqm.xcd.logbackDatabse.SampleFilter" />
+        <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+            <dataSource class="com.mchange.v2.c3p0.ComboPooledDataSource">
+                <driverClass>com.mysql.jdbc.Driver</driverClass>
+                <url>jdbc:mysql://192.168.237.54:3306/flight_fuwu_xcd</url>
+                <user>express</user>
+                <password>express@0513</password>
+            </dataSource>
+        </connectionSource>
+    </appender>
+    <logger name="com.qunar.flightqm.xcd.dao.auto" level="DEBUG" >
+        <appender-ref ref="mybatisdatabase" />
+    </logger>
+
+    <logger name="com.qunar.flightqm.xcd.dao.auto.SystemConfigDao" level="INFO" >
+        <appender-ref ref="console" />
+    </logger>
+
+	<logger name="org.springframework.beans" level="INFO" addtivity="false">
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="org.springframework.test" level="INFO" addtivity="false">
+		<appender-ref ref="console" />
+	</logger>
+	
+	<!-- 对账 -->
+	<logger name="xcd.bill.express" level="INFO" additivity="true">
+		<appender-ref ref="fuwu_xcd_bill" />
+	</logger>
+	<logger name="xcd.bill.ota" level="INFO" additivity="true">
+		<appender-ref ref="fuwu_xcd_bill" />
+	</logger>
+	<logger name="xcd.bill.printprovider" level="INFO" additivity="true">
+		<appender-ref ref="fuwu_xcd_bill" />
+	</logger>
+	
+	<!-- 定时任务清缓存 -->
+	<logger name="xcd.timer " level="INFO">
+		<appender-ref ref="fuwu_xcd_timer" />
+	</logger>
+	<logger name="xcd.ip" level="WARN">
+		<appender-ref ref="fuwu_xcd_timer" />
+	</logger>
+	<logger name="xcd.clientshard" level="INFO">
+		<appender-ref ref="fuwu_xcd_timer" />
+	</logger>
+	
+	<!-- qmq与tts交互信息 -->
+	<logger name="xcd.qmq" level="INFO">
+		<appender-ref ref="fuwu_xcd_qmq" />
+	</logger>
+	
+	<!-- 定时任务detr分配任务 -->
+	<logger name="xcd.order.detrtask" level="INFO">
+		<appender-ref ref="fuwu_xcd_detrtask" />
+	</logger>
+	<logger name="xcd.detr" level="INFO">
+		<appender-ref ref="fuwu_xcd_detrtask" />
+	</logger>
+	<logger name="xcd.printTaskDistibute" level="INFO">
+		<appender-ref ref="fuwu_xcd_detrtask" />
+	</logger>
+	<logger name="xcd.tts" level="INFO">
+		<appender-ref ref="fuwu_xcd_detrtask" />
+	</logger>
+	
+	<!-- 物流信息 -->
+	<logger name="xcd.logistics" level="debug">
+		<appender-ref ref="fuwu_xcd_logistics" />
+	</logger>
+	
+	<logger name="xcd.express" level="debug">
+		<appender-ref ref="fuwu_xcd_express" />
+	</logger>
+	
+	
+	<logger name="xcd.api.zjs" level="INFO">
+		<appender-ref ref="fuwu_xcd_logistics" />
+	</logger>
+	
+	<logger name="express.fee.info">
+		<appender-ref ref="express_fee_info" />
+	</logger>
+
+	<logger name="express.fee.error">
+		<appender-ref ref="express_fee_error" />
+	</logger>
+	
+	<logger name="com.qunar.flightqm.xcd.dao">  
+        <level value="debug" />  
+        <appender-ref ref="fuwu_xcd_sql" />  
+    </logger>
+    
+    <logger name="com.qunar.flightqm.xcd.dao.tts">  
+        <level value="debug" />  
+        <appender-ref ref="fuwu_xcd_sql" />  
+    </logger>
+    
+    <logger name="xcd.logistics.sto">  
+        <level value="debug" />  
+        <appender-ref ref="fuwu_xcd_sto" />  
+    </logger>
+    
+    <logger name="model.detr">
+    	<appender-ref ref="fuwu_xcd_detrtask" />
+    </logger>
+    
+    
+	<root level="INFO">
+		<appender-ref ref="fuwu_xcd_default" />
+		<appender-ref ref="fuwu_xcd_error" />
+	</root>
+</configuration>
