@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- slf4j日志配置文件 -->
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+
+    <property name="log.dir" value="/usr/share/tomcat6/logs" />
+    <property name="encoding" value="UTF-8" />
+    <property name="normal-pattern"
+              value="%d{yyyy-MM-dd.HH:mm:ss} %-5level [%thread] %logger.%M:%L  %msg%n" />
+    <property name="plain-pattern" value="%d{yyyy-MM-dd.HH:mm:ss} %msg%n" />
+
+
+    <appender name="default"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>false</prudent>
+        <Append>true</Append>
+        <encoder>
+            <pattern>${normal-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/default.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="sql"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>false</prudent>
+        <Append>true</Append>
+        <encoder>
+            <pattern>${normal-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/sql.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="org.springframework" additivity="false">
+        <level value="warn" />
+        <appender-ref ref="default" />
+    </logger>
+
+    <logger name="lehuo.lsm.dao" additivity="true">
+        <level value="debug" />
+        <appender-ref ref="sql" />
+    </logger>
+
+    <root>
+        <level value="info" />
+        <appender-ref ref="default" />
+    </root>
+</configuration>

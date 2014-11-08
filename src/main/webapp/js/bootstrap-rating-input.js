@@ -84,8 +84,13 @@
             .on('mouseenter', '[data-value]', function () {
                 var self = $(this),
                     input = self.siblings('input'),
+<<<<<<< HEAD
                     min = input.data('min'),
                     caption = self.siblings('.rating-caption'),
+=======
+                    caption = self.siblings('.rating-caption'),
+                    min = input.data('min'),
+>>>>>>> 5ba25b94750cf770fc54530ed222138171636725
                     max = input.data('max');
                 _paintValue(self.closest('.rating-input'), self.data('value'));
                 var index = Math.round(self.data('value') / (max - min + 1) * (caption_list.length - 1));
@@ -95,8 +100,13 @@
             .on('mouseleave', '[data-value]', function () {
                 var self = $(this),
                     input = self.siblings('input'),
+<<<<<<< HEAD
                     val = input.val(),
                     caption = self.siblings('.rating-caption'),
+=======
+                    caption = self.siblings('.rating-caption'),
+                    val = input.val(),
+>>>>>>> 5ba25b94750cf770fc54530ed222138171636725
                     min = input.data('min'),
                     max = input.data('max');
                 if (val >= min && val <= max) {

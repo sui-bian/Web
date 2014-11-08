@@ -267,7 +267,49 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.6</version>
         </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.11</version>
+        </dependency>
 	</dependencies>
+
+    <profiles>
+
+    <profile>
+        <id>local</id>
+        <properties>
+            <env>local</env>
+        </properties>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/resources.local</directory>
+                </resource>
+                <resource>
+                    <directory>src/main/resources</directory>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+        <profile>
+            <id>server</id>
+            <properties>
+                <env>server</env>
+            </properties>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources.server</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
+
 	<build>
 		<finalName>lehuo.lsm</finalName>
 	</build>

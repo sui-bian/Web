@@ -33,9 +33,10 @@
                 <span>${link.content}</span>
                 <c:forEach var="img" items="${requestScope.images}">
 
-                    <div class="image" id='${img.id}'>
-                        <img src="${img.src}" class="img-responsive img-rounded" style="max-width: 800px;height: auto"/>
-                        <input type="number" name="your_awesome_parameter" id="" class="rating" data-caption="['负分', '不中', '不错哟', '一级棒', '女神']" value="" data-min="1" data-max="5" />
+                    <div class="image">
+                        <img src="${img}" class="img-responsive img-rounded" style="max-width: 800px;height: auto"/>
+                        <input type="number" name="your_awesome_parameter" id="rating:${img}" class="rating" data-caption="['负分', '不中', '不错哟', '一级棒', '女神']" value="" data-min="1" data-max="5" />
+
                     </div>
 
                 </c:forEach>

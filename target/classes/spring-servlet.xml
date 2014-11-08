@@ -14,8 +14,11 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean class="lehuo.lsm.controller.interceptor.IPInterceptor">
-            </bean>
+            <bean class="lehuo.lsm.controller.interceptor.IPInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/"/>
+            <bean class="lehuo.lsm.controller.interceptor.UserAuthInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 
