@@ -24,5 +24,30 @@
 
 	</select>
 
+    <select id="selectNeedReload" resultType="java.lang.String">
+        select link from links where content is null
+    </select>
+
+    <select id="selectbyoffset" parameterType="java.lang.Integer" resultType="links">
+        select id,img from links limit #{offset},1000
+    </select>
+
+    <insert id="batchInsertLinks" parameterType="java.util.List">
+        insert into links(link,domains,reply,extra,pageno) values
+        <foreach collection="list" item="item" index="index" separator="," >
+            (#{item.link},#{item.domains},#{item.reply},#{item.extra},#{item.pageno})
+        </foreach>
+    </insert>
+
+    <insert id="insertLinks" parameterType="links">
+        insert into links(link,domains,reply,extra,pageno) values
+         (#{link},#{domains},#{reply},#{extra},#{pageno})
+    </insert>
+
+    <update id="updateLinksbyLink" parameterType="links">
+        update links set author=#{author},content=#{content},img=#{img},title=#{title},authorlink=#{authorlink},posttime=#{posttime} where link=#{link}
+    </update>
+
+
 
 </mapper>

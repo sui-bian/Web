@@ -1,5 +1,7 @@
 package lehuo.lsm.model;
 
+import lehuo.lsm.model.spider.BaseVo;
+
 /**
  * Created with IntelliJ IDEA.
  * User: simonliu
@@ -35,6 +37,20 @@ public class Links {
     public Links() {}
 
     public Links(Integer id) {this.id = id;}
+
+    public Links(BaseVo vo) {
+        this.title = vo.getTitle();
+
+        this.author =  vo.getAuthor();
+
+        this.authorlink =  vo.getAuthorlink();
+
+        this.content =  vo.getContent();
+
+        this.posttime =  vo.getPosttime();
+
+        this.img = vo.getImgLinks().toString();
+    }
 
     public int getId() {
         return id;

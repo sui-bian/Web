@@ -4,7 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="lehuo.lsm.dao.ImagesDao">
 
-
+    <insert id="insert" parameterType="lehuo.lsm.model.spider.ImagesVo">
+        insert into images (links_id,img_link) values (#{links_id},#{img_link})
+    </insert>
 
 
 </mapper>

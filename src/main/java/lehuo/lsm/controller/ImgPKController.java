@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import us.codecraft.webmagic.lsm.processer.DoubanProcesser;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +32,9 @@ public class ImgPKController {
 
     @Resource
     private LinksService linksService;
+
+    @Resource
+    private DoubanProcesser doubanProcesser;
 
     private static final int oneBatchNum = 10;
 
@@ -106,6 +110,12 @@ public class ImgPKController {
             return "false";
         }
 
+    }
+
+    @RequestMapping(value = "/tasd")
+    @ResponseBody
+    public String tasd(){
+        return doubanProcesser.testlsm();
     }
 
 

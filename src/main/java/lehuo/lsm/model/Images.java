@@ -13,4 +13,9 @@ public class Images {
 
     String img_link;
     String path;
+
+    public Images(Integer links_id,String img_link){
+        this.links_id = links_id;
+        this.img_link = img_link;
+    }
 }
